@@ -30,16 +30,22 @@ section#welcome-section {
   height: 100vh;
 }
 
-nav {
+
+#navbar {
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 50px;
-  padding: 10px 20px;
-  margin-top: 20px;
+  padding: 10px 40px;
+  padding-left: 20px;  
+  position: fixed;
+  background: var(--bg-color);
+  color: #fff;
+  top: 0;
+  z-index: 1000;
 }
 
-nav a {
+#navbar a {
   color: var(--heading-color-2);
   text-decoration: none;
   font-size: 2rem;
@@ -48,7 +54,7 @@ nav a {
   transition: border-bottom 0.3s ease-out;
 }
 
-nav a:hover {
+#navbar a:hover {
   border-bottom: 3px solid var(--accent-color);
 }
 
@@ -135,23 +141,23 @@ header p:nth-of-type(2) {
     margin-bottom: 2rem;
 }
 
-.project {
+.project-tile {
     margin-top: 3rem;
     margin-bottom: 6rem;
 }
 
-.project-title {
+.project {
     font-size: 2rem;
     margin-top: 5rem;
     margin-bottom: 1rem;
 }
 
-.project img {
+.project-tile img {
     width: 100%;
     border-radius: 10px;
 }
 
-.project p {
+.project-tile p {
     font-size: 1.5rem;
     margin-bottom: 3rem;
     margin-top: 1rem;
@@ -159,7 +165,7 @@ header p:nth-of-type(2) {
     text-align: justify;
 }
 
-.project a {
+.project-tile a {
   text-decoration: none;
   color: var(--accent-color);
   font-size: 1.5rem;
@@ -171,7 +177,7 @@ header p:nth-of-type(2) {
   transition: all 0.5s linear;
 }
 
-.project a:hover {
+.project-tile a:hover {
     background-color: var(--accent-color);
     color: var(--bg-color);
 }
@@ -182,9 +188,65 @@ header p:nth-of-type(2) {
 }
 
 @media  screen and ( min-width: 700px ) {
-  body {
-    background-color: red;
+  #navbar {
+    justify-content: flex-end;
+    column-gap: 30px;
   }
+
+  #navbar a {
+    font-size: 2.0rem;
+  }
+
+  #navbar a:last-of-type {
+    margin-right: 30px;
+  }
+
+  header h1:nth-of-type(2) {
+    font-size: 3.5rem;
+  }
+
+  #first-name {
+    font-size: 10rem;
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+
+  #greetings {
+    font-size: 2.5rem;
+  }
+
+  #message {
+    font-size: 3rem;
+    max-width: 500px;
+  }
+
+  #in-touch {
+    font-size: 3rem;
+  }
+
+  #project-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #projects h2 {
+    font-size: 5rem;
+  } 
+
+  .project-tile .project {
+    font-size: 3rem;
+  }
+
+  .project-tile p {
+    font-size: 2rem;
+  }
+
+  .project-tile a {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+  }
+
 }
 
 
